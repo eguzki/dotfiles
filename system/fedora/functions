@@ -1,6 +1,8 @@
 install_packages ()  {
   dnf install -y \
       git \
+      wget \
+      unzip \
       meld \
       yamllint \
       make \

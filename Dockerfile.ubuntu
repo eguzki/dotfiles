@@ -1,5 +1,5 @@
 FROM ubuntu:24.04
-RUN apt update && apt install -y sudo
+RUN apt install -y sudo
 RUN useradd -ms /bin/bash --groups sudo apprunner
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 WORKDIR /home/apprunner
