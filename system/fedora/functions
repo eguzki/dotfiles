@@ -1,0 +1,12 @@
+install_packages ()  {
+  dnf install -y \
+      git \
+      meld \
+      yamllint \
+      make \
+      clang \
+      the_silver_searcher \
+      jq \
+      tig \
+      curl
+}

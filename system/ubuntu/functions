@@ -1,0 +1,12 @@
+install_packages ()  {
+  apt install -y \
+      git \
+      curl \
+      wget \
+      unzip \
+      meld \
+      yamllint \
+      build-essential \
+      nfs-common \
+      keychain
+}

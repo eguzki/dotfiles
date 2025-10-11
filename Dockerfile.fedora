@@ -1,0 +1,4 @@
+FROM quay.io/fedora/fedora:42
+RUN useradd -ms /bin/bash apprunner
+WORKDIR /home/apprunner
+USER apprunner
