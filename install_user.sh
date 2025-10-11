@@ -5,9 +5,9 @@ set -e
 CURRENT_PATH="$( cd "$( dirname "$0" )" && pwd )"
 
 source $CURRENT_PATH/helper/logging.sh
-source $CURRENT_PATH/nerd_fonts/functions.sh
-source $CURRENT_PATH/nvim/functions.sh
-source $CURRENT_PATH/misc/user_defined_bash_functions.sh
+source $CURRENT_PATH/user/nerd_fonts/functions.sh
+source $CURRENT_PATH/user/nvim/functions.sh
+source $CURRENT_PATH/user/misc/user_defined_bash_functions.sh
 
 echo ''
 
