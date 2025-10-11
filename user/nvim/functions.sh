@@ -5,13 +5,12 @@ install_nvim ()  {
   INSTALL_DIR="$HOME/apps/nvim-${VERSION}"
   DOWNLOAD_URL="https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz"
 
-  # TODO: test nvim-x.y.z is installed
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing installation at $INSTALL_DIR"
+    _logInfo "  Found existing nvim installation at $INSTALL_DIR"
     return
   fi
 
-  # This script downloads and installs the stable release of Neovim
+  # This script downloads and installs the release of Neovim
   # for Linux x86-64 into the user's home directory (~/apps/nvim-x.y.z).
 
   # Exit immediately if a command exits with a non-zero status.
