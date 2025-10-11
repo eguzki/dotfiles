@@ -1,3 +1,0 @@
-install_nvim ()  {
-  _logInfo "  nvim installed!"
-}

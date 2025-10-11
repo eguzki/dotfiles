@@ -8,8 +8,8 @@ echo ''
 
 # Make sure only root can run our script
 if [ "$(id -u)" != "0" ]; then
-   echo "This script must be run as root" 1>&2
-   exit 1
+  echo "This script must be run as root" 1>&2
+  exit 1
 fi
 
 DISTRO=$(awk -F= '/^NAME/{print $2}' /etc/os-release | tr -d '"')

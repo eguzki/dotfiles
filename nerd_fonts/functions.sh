@@ -10,8 +10,6 @@ install_nerd_font ()  {
   FONT_DIR=~/.local/share/fonts
   mkdir -p ${FONT_DIR}
 
-  # TODO if !installed -> exit 0
-
   # Create a temporary directory
   TEMP_DIR=$(mktemp -d)
 
