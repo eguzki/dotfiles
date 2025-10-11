@@ -14,7 +14,7 @@ install_fzf ()  {
   # for Linux x86-64 into the user's home directory (~/apps/fzf-x.y.z).
 
   # Exit immediately if a command exits with a non-zero status.
-  set -ex
+  set -e
 
   # --- Main Logic ---
 
