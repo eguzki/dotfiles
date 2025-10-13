@@ -37,7 +37,10 @@ install_fzf ()  {
   # 4. Add Neovim to the system's PATH
   #
   cat <<EOF > ~/.bashrc.d/fzf
-    export PATH=\$PATH:$INSTALL_DIR
+# FZF
+# Set up fzf key bindings and fuzzy completion
+export PATH=\$PATH:$INSTALL_DIR
+eval "\$(fzf --bash)"
 EOF
   _logInfo "  ✅ fzf installed successfully to $INSTALL_DIR"
 }
