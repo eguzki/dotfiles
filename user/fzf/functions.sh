@@ -1,5 +1,11 @@
 install_fzf ()  {
 
+  local VERSION
+  local INSTALL_DIR
+  local DOWNLOAD_URL
+  local TMP_DIR
+  local TMP_FILE
+
   # --- Configuration ---
   VERSION="0.65.2"
   INSTALL_DIR="$HOME/apps/fzf-${VERSION}"
@@ -29,12 +35,10 @@ install_fzf ()  {
   mkdir -p "$INSTALL_DIR"
   tar xzvf "$TMP_FILE" -C "$INSTALL_DIR"
 
-  ls -al "$INSTALL_DIR"
-
   # 3. Clean up the temporary file
   rm "$TMP_FILE"
 
-  # 4. Add Neovim to the system's PATH
+  # 4. Add FZF to the system's PATH
   #
   cat <<EOF > ~/.bashrc.d/fzf
 # FZF

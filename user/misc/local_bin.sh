@@ -7,7 +7,7 @@ install_local_bin()  {
   fi
 
   cat <<EOF > ~/.bashrc.d/local_bin
-    export PATH=$HOME/.local/bin:\$PATH
+export PATH=$HOME/.local/bin:\$PATH
 EOF
 
   _logInfo "  ✅ ~/.local/bin added to the \$PATH"

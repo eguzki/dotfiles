@@ -4,6 +4,10 @@ install_nerd_font ()  {
     return
   fi
 
+  local FONT_URL
+  local FONT_DIR
+  local TMP_DIR
+
   set -e
 
   FONT_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip

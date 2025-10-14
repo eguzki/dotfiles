@@ -1,5 +1,11 @@
 install_nvim_binary ()  {
 
+  local VERSION
+  local INSTALL_DIR
+  local DOWNLOAD_URL
+  local TMP_DIR
+  local TMP_FILE
+
   # --- Configuration ---
   VERSION=v0.11.4
   INSTALL_DIR="$HOME/apps/nvim-${VERSION}"
