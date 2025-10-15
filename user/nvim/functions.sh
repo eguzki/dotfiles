@@ -47,7 +47,6 @@ EOF
 }
 
 DOTFILES_NVIM_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-HOME_CONFIG=$HOME/.config
 
 install_nvim_config () {
   mkdir -p $HOME_CONFIG
