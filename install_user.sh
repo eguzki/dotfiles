@@ -14,6 +14,7 @@ source $CURRENT_PATH/user/misc/user_defined_bash_functions.sh
 source $CURRENT_PATH/user/misc/local_bin.sh
 source $CURRENT_PATH/user/gitconfig/functions.sh
 source $CURRENT_PATH/user/yq/functions.sh
+source $CURRENT_PATH/user/jq/functions.sh
 
 echo ''
 
@@ -21,6 +22,7 @@ install_user_defined_bash_functions
 install_local_bin
 install_gitconfig
 install_yq
+install_jq
 install_nerd_font
 install_fzf
 install_ripgrep
