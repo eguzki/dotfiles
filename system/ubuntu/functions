@@ -8,5 +8,6 @@ install_packages ()  {
       yamllint \
       build-essential \
       nfs-common \
+      xclip \
       keychain
 }
