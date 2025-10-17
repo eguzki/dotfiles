@@ -39,7 +39,7 @@ install_gcloud()  {
 # GCLOUD
 
 source $INSTALL_DIR/path.bash.inc
-source $INSTALL_DIR/completion.bash
+source $INSTALL_DIR/completion.bash.inc
 EOF
   _logInfo "  ✅ gcloud installed successfully to $INSTALL_DIR"
 }
