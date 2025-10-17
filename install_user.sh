@@ -8,6 +8,7 @@ HOME_CONFIG=$HOME/.config
 source $CURRENT_PATH/helper/logging.sh
 source $CURRENT_PATH/user/nerd_fonts/functions.sh
 source $CURRENT_PATH/user/nvim/functions.sh
+source $CURRENT_PATH/user/fd/functions.sh
 source $CURRENT_PATH/user/fzf/functions.sh
 source $CURRENT_PATH/user/ripgrep/functions.sh
 source $CURRENT_PATH/user/misc/user_defined_bash_functions.sh
@@ -21,6 +22,7 @@ echo ''
 install_user_defined_bash_functions
 install_local_bin
 install_gitconfig
+install_fd
 install_yq
 install_jq
 install_nerd_font

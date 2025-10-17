@@ -43,8 +43,11 @@ install_fzf ()  {
   cat <<EOF > ~/.bashrc.d/fzf
 # FZF
 # Set up fzf key bindings and fuzzy completion
+export FZF_DEFAULT_COMMAND='fd --type file'
+export FZF_CTRL_T_COMMAND="\$FZF_DEFAULT_COMMAND"
 export PATH=\$PATH:$INSTALL_DIR
 eval "\$(fzf --bash)"
+
 EOF
   _logInfo "  ✅ fzf installed successfully to $INSTALL_DIR"
 }
