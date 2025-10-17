@@ -16,6 +16,7 @@ source $CURRENT_PATH/user/misc/local_bin.sh
 source $CURRENT_PATH/user/gitconfig/functions.sh
 source $CURRENT_PATH/user/yq/functions.sh
 source $CURRENT_PATH/user/jq/functions.sh
+source $CURRENT_PATH/user/gcloud/functions.sh
 
 echo ''
 
@@ -29,6 +30,7 @@ install_nerd_font
 install_fzf
 install_ripgrep
 install_nvim
+install_gcloud
 
 echo ''
 _logInfo "  All installed!"
