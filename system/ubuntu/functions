@@ -9,5 +9,6 @@ install_packages ()  {
       build-essential \
       nfs-common \
       xclip \
+      tig \
       keychain
 }
