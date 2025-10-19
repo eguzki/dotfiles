@@ -45,7 +45,7 @@ install_fzf ()  {
 # Set up fzf key bindings and fuzzy completion
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="\$FZF_DEFAULT_COMMAND"
-export PATH=\$PATH:$INSTALL_DIR
+export PATH=$INSTALL_DIR:\$PATH
 eval "\$(fzf --bash)"
 
 EOF

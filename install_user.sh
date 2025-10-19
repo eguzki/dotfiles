@@ -18,6 +18,7 @@ source $CURRENT_PATH/user/yq/functions.sh
 source $CURRENT_PATH/user/jq/functions.sh
 source $CURRENT_PATH/user/gcloud/functions.sh
 source $CURRENT_PATH/user/go/functions.sh
+source $CURRENT_PATH/user/starship/functions.sh
 
 echo ''
 
@@ -33,6 +34,7 @@ install_ripgrep
 install_nvim
 install_gcloud
 install_go
+install_starship
 
 echo ''
 _logInfo "  All installed!"
