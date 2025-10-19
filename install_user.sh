@@ -17,6 +17,7 @@ source $CURRENT_PATH/user/gitconfig/functions.sh
 source $CURRENT_PATH/user/yq/functions.sh
 source $CURRENT_PATH/user/jq/functions.sh
 source $CURRENT_PATH/user/gcloud/functions.sh
+source $CURRENT_PATH/user/go/functions.sh
 
 echo ''
 
@@ -31,6 +32,7 @@ install_fzf
 install_ripgrep
 install_nvim
 install_gcloud
+install_go
 
 echo ''
 _logInfo "  All installed!"
