@@ -20,6 +20,7 @@ source $CURRENT_PATH/user/gcloud/functions.sh
 source $CURRENT_PATH/user/go/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
 source $CURRENT_PATH/user/gh/functions.sh
+source $CURRENT_PATH/user/kubectl/functions.sh
 
 echo ''
 
@@ -37,6 +38,7 @@ install_gcloud
 install_go
 install_starship
 install_gh
+install_kubectl
 
 echo ''
 _logInfo "  All installed!"
