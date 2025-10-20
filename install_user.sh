@@ -21,6 +21,7 @@ source $CURRENT_PATH/user/go/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
 source $CURRENT_PATH/user/gh/functions.sh
 source $CURRENT_PATH/user/kubectl/functions.sh
+source $CURRENT_PATH/user/opm/functions.sh
 
 echo ''
 
@@ -39,6 +40,7 @@ install_go
 install_starship
 install_gh
 install_kubectl
+install_opm
 
 echo ''
 _logInfo "  All installed!"
