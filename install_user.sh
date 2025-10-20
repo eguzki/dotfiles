@@ -19,6 +19,7 @@ source $CURRENT_PATH/user/jq/functions.sh
 source $CURRENT_PATH/user/gcloud/functions.sh
 source $CURRENT_PATH/user/go/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
+source $CURRENT_PATH/user/gh/functions.sh
 
 echo ''
 
@@ -35,6 +36,7 @@ install_nvim
 install_gcloud
 install_go
 install_starship
+install_gh
 
 echo ''
 _logInfo "  All installed!"
