@@ -41,7 +41,13 @@ install_nvim_binary ()  {
   # 4. Add Neovim to the system's PATH
   #
   cat <<EOF > ~/.bashrc.d/nvim
-    export PATH=$INSTALL_DIR/bin:\$PATH
+export PATH=$INSTALL_DIR/bin:\$PATH
+
+# Ensure nvim is set as EDITOR if it isn't already set
+#
+if [ -z "\$EDITOR" ]; then
+    export EDITOR="$INSTALL_DIR/bin/nvim"
+fi
 EOF
   _logInfo "  ✅ Neovim installed successfully to $INSTALL_DIR"
 }
