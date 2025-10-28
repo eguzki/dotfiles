@@ -510,11 +510,7 @@ require("lazy").setup({
 					---@param bufnr? integer some lsp support methods only in specific files
 					---@return boolean
 					local function client_supports_method(client, method, bufnr)
-						if vim.fn.has("nvim-0.11") == 1 then
-							return client:supports_method(method, bufnr)
-						else
-							return client.supports_method(method, { bufnr = bufnr })
-						end
+						return client:supports_method(method, bufnr)
 					end
 
 					-- The following two autocommands are used to highlight references of the
@@ -873,6 +869,15 @@ require("lazy").setup({
 		--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	},
+	-- nvim-treesitter-context
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		--config = function()
+		--  require('treesitter-context').setup({
+		--    -- Your treesitter-context configuration here
+		--  })
+		--end,
 	},
 	-- Nvimtree (File Explorer)
 	-- Added this reference to the initial file
