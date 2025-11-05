@@ -205,6 +205,8 @@ require("lazy").setup({
 			},
 		},
 	},
+	-- Productivity metrics, goals, leaderboards, and automatic time tracking.
+	{ "wakatime/vim-wakatime", lazy = false },
 
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
