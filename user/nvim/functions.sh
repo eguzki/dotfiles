@@ -57,7 +57,7 @@ DOTFILES_NVIM_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null &
 install_nvim_config () {
   mkdir -p $HOME_CONFIG
 
-  declare -a nvim_configs=("nvim-go" "nvim-rust")
+  declare -a nvim_configs=("nvim-go" "nvim-rust" "nvim-ts")
 
   for nvim_config in "${nvim_configs[@]}"
   do
