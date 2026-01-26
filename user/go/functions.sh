@@ -7,7 +7,7 @@ install_go()  {
   local TMP_FILE
 
   # --- Configuration ---
-  VERSION="1.25.3"
+  VERSION="1.25.6"
   INSTALL_DIR="$HOME/apps/go-${VERSION}"
   DOWNLOAD_URL="https://go.dev/dl/go${VERSION}.linux-amd64.tar.gz"
 
