@@ -7,9 +7,10 @@ install_opm()  {
   local TMP_FILE
 
   # --- Configuration ---
-  VERSION="4.18.26"
+  VERSION="4.21.3"
+  OCP_VERSION="4.21"
   INSTALL_DIR="$HOME/apps/opm-${VERSION}"
-  DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.18/opm-linux-rhel9-${VERSION}.tar.gz"
+  DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-${OCP_VERSION}/opm-linux-rhel9-${VERSION}.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
     _logInfo "  Found existing opm installation at $INSTALL_DIR"
