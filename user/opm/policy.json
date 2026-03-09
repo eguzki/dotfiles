@@ -1,0 +1,33 @@
+{
+	"default": [
+		{
+			"type": "reject"
+		}
+	],
+	"transports": {
+		"docker": {
+			"quay.io": [
+				{
+					"type": "insecureAcceptAnything"
+				}
+			],
+			"docker.io": [
+				{
+					"type": "insecureAcceptAnything"
+				}
+			],
+			"registry.redhat.io": [
+				{
+					"type": "insecureAcceptAnything"
+				}
+			]
+		},
+		"docker-daemon": {
+			"": [
+				{
+					"type": "insecureAcceptAnything"
+				}
+			]
+		}
+	}
+}

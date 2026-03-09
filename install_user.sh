@@ -42,6 +42,7 @@ install_starship
 install_gh
 install_kubectl
 install_opm
+install_opm_policy
 install_k9s
 
 echo ''
