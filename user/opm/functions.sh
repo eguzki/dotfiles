@@ -47,3 +47,21 @@ export PATH=$INSTALL_DIR:\$PATH
 EOF
   _logInfo "  ✅ opm installed successfully to $INSTALL_DIR"
 }
+
+install_opm_policy()  {
+  local LOCAL_DIR
+  local LOCAL_FILE
+  local DEST_FILE
+
+  LOCAL_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+  LOCAL_FILE="${LOCAL_DIR}/policy.json"
+  DEST_FILE="$HOME/.config/containers/policy.json"
+
+  # 1. Add the signature verification policy file
+  # https://github.com/containers/image/blob/main/docs/containers-policy.json.5.md
+  #
+  mkdir -p $(dirname $DEST_FILE)
+  cp -r $LOCAL_FILE $DEST_FILE
+
+  _logInfo "  ✅ opm policy file installed successfully to $DEST_FILE"
+}
