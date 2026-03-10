@@ -9,11 +9,9 @@ install_kubectl()  {
   local TMP_FILE
 
   # --- Configuration ---
-  MINOR_VERSION="4.19"
-  PATCH_VERSION="16"
-  VERSION="${MINOR_VERSION}.${PATCH_VERSION}"
+  VERSION="4.21"
   INSTALL_DIR="$HOME/apps/kubectl-${VERSION}"
-  DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${MINOR_VERSION}/openshift-client-linux-arm64-${VERSION}.tar.gz"
+  DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${VERSION}/openshift-client-linux.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
     _logInfo "  Found existing kubectl & oc installation at $INSTALL_DIR"
