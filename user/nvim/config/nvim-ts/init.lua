@@ -63,6 +63,10 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
@@ -693,14 +697,17 @@ require("lazy").setup({
 			{
 				"<leader>f",
 				function()
-					require("conform").format({ async = true, lsp_format = "fallback" })
+					require("conform").format({ async = true })
 				end,
 				mode = "",
 				desc = "[F]ormat buffer",
 			},
 		},
+		-- This will provide type hinting with LuaLS
+		---@module "conform"
+		---@type conform.setupOpts
 		opts = {
-			notify_on_error = false,
+			notify_on_error = true,
 			format_on_save = function(bufnr)
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
@@ -718,7 +725,19 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- You can customize some of the format options for the filetype (:help conform.format)
-				typescript = { "biome", "biome-organize-imports" },
+				typescript = { "biome" },
+				typescriptreact = { "biome" },
+				javascript = { "biome" },
+				javascriptreact = { "biome" },
+			},
+			formatters = {
+				biome = {
+					args = { "format", "--indent-style=space", "--stdin-file-path", "$FILENAME" },
+				},
+			},
+			-- Set default options
+			default_format_opts = {
+				lsp_format = "fallback",
 			},
 		},
 	},
