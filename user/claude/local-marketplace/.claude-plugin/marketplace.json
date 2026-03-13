@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "personal-marketplace",
+  "description": "Personal local plugins marketplace",
+  "owner": {
+    "name": "eguzki",
+    "email": "user@local"
+  },
+  "plugins": [
+    {
+      "name": "personal-skills",
+      "description": "Personal workflow skills for custom utilities",
+      "version": "1.0.0",
+      "author": {
+        "name": "eguzki",
+        "email": "user@local"
+      },
+      "source": "./personal-skills",
+      "category": "productivity"
+    }
+  ]
+}

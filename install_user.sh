@@ -23,6 +23,7 @@ source $CURRENT_PATH/user/gh/functions.sh
 source $CURRENT_PATH/user/kubectl/functions.sh
 source $CURRENT_PATH/user/opm/functions.sh
 source $CURRENT_PATH/user/k9s/functions.sh
+source $CURRENT_PATH/user/claude/functions.sh
 
 echo ''
 
@@ -44,6 +45,7 @@ install_kubectl
 install_opm
 install_opm_policy
 install_k9s
+install_claude_plugins
 
 echo ''
 _logInfo "  All installed!"
