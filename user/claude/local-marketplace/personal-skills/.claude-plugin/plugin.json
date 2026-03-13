@@ -1,0 +1,9 @@
+{
+  "name": "personal-skills",
+  "description": "Personal workflow skills for custom utilities",
+  "author": {
+    "name": "eguzki",
+    "email": "user@local"
+  },
+  "version": "1.0.0"
+}
