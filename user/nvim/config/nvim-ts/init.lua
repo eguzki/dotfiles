@@ -728,14 +728,14 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- You can customize some of the format options for the filetype (:help conform.format)
-				typescript = { "biome" },
-				typescriptreact = { "biome" },
-				javascript = { "biome" },
-				javascriptreact = { "biome" },
+				typescript = { "eslint_d" },
+				typescriptreact = { "eslint_d" },
+				javascript = { "eslint_d" },
+				javascriptreact = { "eslint_d" },
 			},
 			formatters = {
-				biome = {
-					args = { "format", "--indent-style=space", "--stdin-file-path", "$FILENAME" },
+				eslint_d = {
+					args = { "--stdin", "--fix-to-stdout", "--stdin-filename", "$FILENAME" },
 				},
 			},
 			-- Set default options
