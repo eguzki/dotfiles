@@ -110,7 +110,11 @@ The improved version
 
 **Explanation:** Brief explanation of what was wrong and why the correction improves it.
 
-### Step 4: Provide Summary
+### Step 4: Provide Complete Corrected Version
+
+Always include the full corrected text with all improvements applied. This allows users to easily copy the corrected version.
+
+### Step 5: Provide Summary
 
 After corrections, include:
 - Count of issues found by category
@@ -139,6 +143,12 @@ Structure the review as follows:
 1. **Line Z**: [Original] → [Suggested improvement]
    - Explanation: [How this enhances readability]
 
+### Corrected Version
+
+```
+[Complete text with all corrections applied]
+```
+
 ### Summary
 
 - Critical errors: X
@@ -152,6 +162,12 @@ Structure the review as follows:
 ```
 
 ## Best Practices
+
+### Always Provide Complete Corrected Text
+
+- ALWAYS include a "Corrected Version" section with the full text incorporating all improvements
+- This is mandatory regardless of the number or type of corrections
+- Users should be able to copy the corrected text directly without having to apply corrections manually
 
 ### Be Comprehensive
 
