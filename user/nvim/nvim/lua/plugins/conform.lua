@@ -41,6 +41,7 @@ return {
 				javascriptreact = { "eslint_d" },
 				go = { "gofmt" },
 				rust = { "rustfmt" },
+				markdown = { "markdownlint" },
 			},
 			formatters = {
 				eslint_d = {
