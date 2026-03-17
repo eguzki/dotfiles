@@ -245,6 +245,7 @@ return {
 						},
 					},
 				},
+				marksman = {},
 			}
 
 			-- Now setup those configurations
