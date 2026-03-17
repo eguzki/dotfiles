@@ -58,24 +58,12 @@ install_nvim_config () {
   mkdir -p $HOME_CONFIG
 
   declare -a nvim_configs=("nvim-go" "nvim-rust" "nvim-ts")
-
-  for nvim_config in "${nvim_configs[@]}"
-  do
-    if [ -d "$HOME_CONFIG/${nvim_config}" ]; then
-      rm -rf $HOME_CONFIG/${nvim_config} 2>/dev/null
-    fi
-    cp -r $DOTFILES_NVIM_PATH/config/${nvim_config} $HOME_CONFIG
-    _logInfo "  ✅ Neovim ${nvim_config} config installed successfully to $HOME_CONFIG"
-  done
-}
-
-install_nvim_selector ()  {
-  cp $DOTFILES_NVIM_PATH/nvims $HOME/.local/bin
-  _logInfo "  ✅ Neovim selector installed in $HOME/.local/bin"
+  rm -rf $HOME_CONFIG/nvim 2>/dev/null
+  cp -ar $DOTFILES_NVIM_PATH/nvim $HOME_CONFIG
+  _logInfo "  ✅ Neovim ${nvim_config} config installed successfully to $HOME_CONFIG"
 }
 
 install_nvim ()  {
     install_nvim_binary
-    install_nvim_selector
     install_nvim_config
 }
