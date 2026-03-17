@@ -1,10 +1,17 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		-- Use stable version compatible with Neovim < 0.12
+		branch = "master",
 		build = ":TSUpdate",
-		event = { "BufReadPre", "BufNewFile" },
+		lazy = false,
 		config = function()
-			local treesitter = require("nvim-treesitter.configs")
+			-- local treesitter = require("nvim-treesitter.configs")
+			local status, treesitter = pcall(require, "nvim-treesitter.configs")
+			if not status then
+				vim.notify("nvim-treesitter.configs not found. Run :Lazy sync", vim.log.levels.WARN)
+				return
+			end
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
