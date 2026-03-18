@@ -42,6 +42,8 @@ return {
 				go = { "gofmt" },
 				rust = { "rustfmt" },
 				markdown = { "markdownlint" },
+				bash = { "shfmt" },
+				sh = { "shfmt" },
 			},
 			formatters = {
 				eslint_d = {
