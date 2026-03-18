@@ -246,6 +246,7 @@ return {
 					},
 				},
 				marksman = {},
+				bashls = {},
 			}
 
 			-- Now setup those configurations
