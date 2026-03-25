@@ -44,6 +44,9 @@ return {
 				markdown = { "markdownlint" },
 				bash = { "shfmt" },
 				sh = { "shfmt" },
+				yaml = { "yamlfmt" },
+				json = { "prettier" },
+				jsonc = { "prettier" },
 			},
 			formatters = {
 				eslint_d = {
