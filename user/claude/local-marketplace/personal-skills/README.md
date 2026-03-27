@@ -29,6 +29,33 @@ Reviews English text for grammar, syntax, and style issues.
 - Clear before/after corrections
 - Explanations for each change
 
+### `/clipboard` - Copy to Clipboard
+
+Copies content to system clipboard using `xclip`.
+
+**Usage:**
+
+```bash
+# Copy last assistant output (default)
+/clipboard
+
+# Copy specific text
+/clipboard echo "Hello, World!"
+
+# Copy file contents
+/clipboard ~/.bashrc
+
+# Natural language
+"Copy that to clipboard"
+"Copy the previous output to clipboard"
+```
+
+**Features:**
+- Defaults to most recent assistant output
+- Copy text directly or from files
+- Uses `xclip -selection clipboard`
+- Confirms copy with size info
+
 ## Installation
 
 ### Option 1: Use with --plugin-dir
@@ -59,6 +86,8 @@ personal-skills/
 ├── .claude-plugin/
 │   └── plugin.json          # Plugin metadata
 ├── skills/
+│   ├── clipboard/
+│   │   └── SKILL.md         # Clipboard copy skill
 │   └── english/
 │       └── SKILL.md         # English review skill
 └── README.md                # This file
