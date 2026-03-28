@@ -47,6 +47,7 @@ return {
 				yaml = { "yamlfmt" },
 				json = { "prettier" },
 				jsonc = { "prettier" },
+				make = { "bake" },
 			},
 			formatters = {
 				eslint_d = {
