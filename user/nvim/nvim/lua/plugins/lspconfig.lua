@@ -247,7 +247,6 @@ return {
 				},
 				marksman = {},
 				bashls = {},
-				autotools_ls = {},
 			}
 
 			-- Now setup those configurations
