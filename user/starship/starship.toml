@@ -12,3 +12,7 @@ disabled = false
 [[kubernetes.contexts]]
 context_pattern = "api-management-tenant/api-stone-prd-rh01-pg1f-p1-openshiftapps-com:6443/eastizle"
 context_alias = "konflux"
+
+[[kubernetes.contexts]]
+context_pattern = "kind-.*"
+context_alias = "kind"
