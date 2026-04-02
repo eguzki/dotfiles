@@ -3,3 +3,12 @@
 
 # Inserts a blank line between shell prompts
 add_newline = false
+
+[kubernetes]
+disabled = false
+# format = 'on [⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
+# format = '[$symbol$context( \($namespace\))]($style) in '
+
+[[kubernetes.contexts]]
+context_pattern = "api-management-tenant/api-stone-prd-rh01-pg1f-p1-openshiftapps-com:6443/eastizle"
+context_alias = "konflux"

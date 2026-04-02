@@ -2,7 +2,7 @@
 
 set -e
 
-CURRENT_PATH="$( cd "$( dirname "$0" )" && pwd )"
+CURRENT_PATH="$(cd "$(dirname "$0")" && pwd)"
 HOME_CONFIG=$HOME/.config
 
 source $CURRENT_PATH/helper/logging.sh
@@ -41,6 +41,7 @@ install_nvim
 install_gcloud
 install_go
 install_starship
+install_starship_config
 install_gh
 install_kubectl
 install_opm
