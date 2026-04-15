@@ -2,7 +2,11 @@ return {
 	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
-			require("nvim-tree").setup({})
+			require("nvim-tree").setup({
+				filters = {
+					git_ignored = false,
+				},
+			})
 		end,
 		dependencies = {
 			-- Useful for getting pretty icons, but requires a Nerd Font.
