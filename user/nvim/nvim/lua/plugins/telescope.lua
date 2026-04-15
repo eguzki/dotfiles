@@ -66,6 +66,12 @@ return {
 							return { "--hidden" }
 						end,
 					},
+					grep_string = {
+						file_ignore_patterns = { "node_modules", ".git/", ".venv" },
+						additional_args = function(_)
+							return { "--hidden" }
+						end,
+					},
 					find_files = {
 						-- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
 						find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
