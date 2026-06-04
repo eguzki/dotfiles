@@ -15,5 +15,5 @@ install_claude_plugins()  {
   # In the command, we use source/. instead of source to take advantage of Bash globbing
   # and ensure we copy any hidden files or folders, which would be missed if we just used source.
   cp -a $CWP/local-marketplace/. $INSTALL_DIR
-  _logInfo "  ✅ Claude local marketplace installed successfully to $INSTALL_DIR"
+  _logInfo "[claude]  ✅ Claude local marketplace installed successfully to $INSTALL_DIR"
 }

@@ -12,7 +12,7 @@ install_gh()  {
   DOWNLOAD_URL="https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing gh installation at $INSTALL_DIR"
+    _logInfo "[gh]  Found existing gh installation at $INSTALL_DIR"
     return
   fi
 
@@ -41,5 +41,5 @@ install_gh()  {
 # gh
 export PATH=$INSTALL_DIR/bin:\$PATH
 EOF
-  _logInfo "  ✅ gh installed successfully to $INSTALL_DIR"
+  _logInfo "[gh]  ✅ gh installed successfully to $INSTALL_DIR"
 }

@@ -12,7 +12,7 @@ install_go() {
 	DOWNLOAD_URL="https://go.dev/dl/go${VERSION}.linux-amd64.tar.gz"
 
 	if [ -d "$INSTALL_DIR" ]; then
-		_logInfo "  Found existing go installation at $INSTALL_DIR"
+		_logInfo "[go]  Found existing go installation at $INSTALL_DIR"
 		return
 	fi
 
@@ -41,5 +41,5 @@ install_go() {
 # Go
 export PATH=$INSTALL_DIR/bin:\$PATH
 EOF
-	_logInfo "  ✅ go installed successfully to $INSTALL_DIR"
+	_logInfo "[go]  ✅ go installed successfully to $INSTALL_DIR"
 }

@@ -10,7 +10,7 @@ install_gitconfig()  {
   LOCAL_FILE="${LOCAL_DIR}/.gitconfig"
 
   if [ -f "$DEST_FILE" ]; then
-    _logInfo "  Found existing .gitconfig installation"
+    _logInfo "[gitconfig]  Found existing .gitconfig installation"
 
     if cmp --silent "$DEST_FILE" "$LOCAL_FILE" ; then
       return
@@ -18,5 +18,5 @@ install_gitconfig()  {
   fi
 
   cp -r $LOCAL_DIR/.gitconfig $DEST_FILE
-  _logInfo "  ✅ gitconfig installed successfully"
+  _logInfo "[gitconfig]  ✅ gitconfig installed successfully"
 }

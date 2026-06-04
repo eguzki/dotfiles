@@ -12,7 +12,7 @@ install_tree-sitter-cli()  {
   DOWNLOAD_URL="https://github.com/tree-sitter/tree-sitter/releases/download/v${VERSION}/tree-sitter-cli-linux-x64.zip"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing tree-sitter-cli installation at $INSTALL_DIR"
+    _logInfo "[tree-sitter-cli]  Found existing tree-sitter-cli installation at $INSTALL_DIR"
     return
   fi
 
@@ -41,5 +41,5 @@ install_tree-sitter-cli()  {
 # tree-sitter-cli 
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ tree-sitter-cli installed successfully to $INSTALL_DIR"
+  _logInfo "[tree-sitter-cli]  ✅ tree-sitter-cli installed successfully to $INSTALL_DIR"
 }

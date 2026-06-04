@@ -10,7 +10,7 @@ install_jq()  {
   DOWNLOAD_URL="https://github.com/jqlang/jq/releases/download/jq-${VERSION}/jq-linux-amd64"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing jq installation at $INSTALL_DIR"
+    _logInfo "[jq]  Found existing jq installation at $INSTALL_DIR"
     return
   fi
 
@@ -33,5 +33,5 @@ install_jq()  {
 # JQ
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ jq installed successfully to $INSTALL_DIR"
+  _logInfo "[jq]  ✅ jq installed successfully to $INSTALL_DIR"
 }

@@ -12,7 +12,7 @@ install_fzf ()  {
   DOWNLOAD_URL="https://github.com/junegunn/fzf/releases/download/v${VERSION}/fzf-${VERSION}-linux_amd64.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing fzf installation at $INSTALL_DIR"
+    _logInfo "[fzf]  Found existing fzf installation at $INSTALL_DIR"
     return
   fi
 
@@ -49,5 +49,5 @@ export PATH=$INSTALL_DIR:\$PATH
 eval "\$(fzf --bash)"
 
 EOF
-  _logInfo "  ✅ fzf installed successfully to $INSTALL_DIR"
+  _logInfo "[fzf]  ✅ fzf installed successfully to $INSTALL_DIR"
 }

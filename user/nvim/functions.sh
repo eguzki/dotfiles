@@ -12,7 +12,7 @@ install_nvim_binary ()  {
   DOWNLOAD_URL="https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing nvim installation at $INSTALL_DIR"
+    _logInfo "[nvim]  Found existing nvim installation at $INSTALL_DIR"
     return
   fi
 
@@ -49,7 +49,7 @@ if [ -z "\$EDITOR" ]; then
     export EDITOR="$INSTALL_DIR/bin/nvim"
 fi
 EOF
-  _logInfo "  ✅ Neovim installed successfully to $INSTALL_DIR"
+  _logInfo "[nvim]  ✅ Neovim installed successfully to $INSTALL_DIR"
 }
 
 DOTFILES_NVIM_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -60,7 +60,7 @@ install_nvim_config () {
   declare -a nvim_configs=("nvim-go" "nvim-rust" "nvim-ts")
   rm -rf $HOME_CONFIG/nvim 2>/dev/null
   cp -ar $DOTFILES_NVIM_PATH/nvim $HOME_CONFIG
-  _logInfo "  ✅ Neovim ${nvim_config} config installed successfully to $HOME_CONFIG"
+  _logInfo "[nvim]  ✅ Neovim ${nvim_config} config installed successfully to $HOME_CONFIG"
 }
 
 install_nvim ()  {

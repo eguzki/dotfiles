@@ -11,7 +11,7 @@ install_obsidian()  {
   DOWNLOAD_URL="https://github.com/obsidianmd/obsidian-releases/releases/download/v${VERSION}/Obsidian-${VERSION}.AppImage"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing obsidian installation at $INSTALL_DIR"
+    _logInfo "[obsidian]  Found existing obsidian installation at $INSTALL_DIR"
     return
   fi
 
@@ -42,5 +42,5 @@ WRAPPER
 # obsidian
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ obsidian installed successfully to $INSTALL_DIR"
+  _logInfo "[obsidian]  ✅ obsidian installed successfully to $INSTALL_DIR"
 }

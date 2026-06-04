@@ -12,7 +12,7 @@ install_fd()  {
   DOWNLOAD_URL="https://github.com/sharkdp/fd/releases/download/v${VERSION}/fd-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing fd installation at $INSTALL_DIR"
+    _logInfo "[fd]  Found existing fd installation at $INSTALL_DIR"
     return
   fi
 
@@ -41,5 +41,5 @@ install_fd()  {
 # FD
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ fd installed successfully to $INSTALL_DIR"
+  _logInfo "[fd]  ✅ fd installed successfully to $INSTALL_DIR"
 }
