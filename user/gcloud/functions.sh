@@ -10,7 +10,7 @@ install_gcloud()  {
   DOWNLOAD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing gcloud installation at $INSTALL_DIR"
+    _logInfo "[gcloud]  Found existing gcloud installation at $INSTALL_DIR"
     return
   fi
 
@@ -41,5 +41,5 @@ install_gcloud()  {
 source $INSTALL_DIR/path.bash.inc
 source $INSTALL_DIR/completion.bash.inc
 EOF
-  _logInfo "  ✅ gcloud installed successfully to $INSTALL_DIR"
+  _logInfo "[gcloud]  ✅ gcloud installed successfully to $INSTALL_DIR"
 }

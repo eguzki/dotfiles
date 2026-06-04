@@ -14,7 +14,7 @@ install_kubectl()  {
   DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${VERSION}/openshift-client-linux.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing kubectl & oc installation at $INSTALL_DIR"
+    _logInfo "[kubectl]  Found existing kubectl & oc installation at $INSTALL_DIR"
     return
   fi
 
@@ -47,5 +47,5 @@ source <(kubectl completion bash)
 alias k=kubectl
 complete -o default -F __start_kubectl k
 EOF
-  _logInfo "  ✅ kubectl & oc installed successfully to $INSTALL_DIR"
+  _logInfo "[kubectl]  ✅ kubectl & oc installed successfully to $INSTALL_DIR"
 }

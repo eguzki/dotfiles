@@ -12,7 +12,7 @@ install_k9s()  {
   DOWNLOAD_URL="https://github.com/derailed/k9s/releases/download/v${VERSION}/k9s_Linux_amd64.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing k9s installation at $INSTALL_DIR"
+    _logInfo "[k9s]  Found existing k9s installation at $INSTALL_DIR"
     return
   fi
 
@@ -41,5 +41,5 @@ install_k9s()  {
 # k9s
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ k9s installed successfully to $INSTALL_DIR"
+  _logInfo "[k9s]  ✅ k9s installed successfully to $INSTALL_DIR"
 }

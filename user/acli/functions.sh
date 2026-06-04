@@ -12,8 +12,8 @@ install_acli() {
 
 	if [ -f "$INSTALL_DIR/acli" ]; then
 		local CURRENT_VERSION=$($INSTALL_DIR/acli --version 2>/dev/null | head -n1 || echo "unknown")
-		_logInfo "  Found existing acli installation at $INSTALL_DIR ($CURRENT_VERSION)"
-		_logInfo "  To update: delete $INSTALL_DIR and run this script again"
+		_logInfo "[acli]  Found existing acli installation at $INSTALL_DIR ($CURRENT_VERSION)"
+		_logInfo "[acli]  To update: delete $INSTALL_DIR and run this script again"
 		return
 	fi
 
@@ -46,5 +46,5 @@ install_acli() {
 export PATH=$INSTALL_DIR:\$PATH
 EOF
 	local CURRENT_VERSION=$($INSTALL_DIR/acli --version 2>/dev/null | head -n1 || echo "unknown")
-	_logInfo "  ✅ acli installed successfully to $INSTALL_DIR ($CURRENT_VERSION)"
+	_logInfo "[acli]  ✅ acli installed successfully to $INSTALL_DIR ($CURRENT_VERSION)"
 }

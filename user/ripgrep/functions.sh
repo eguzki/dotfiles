@@ -12,7 +12,7 @@ install_ripgrep()  {
   DOWNLOAD_URL="https://github.com/BurntSushi/ripgrep/releases/download/${VERSION}/ripgrep-${VERSION}-x86_64-unknown-linux-musl.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing ripgrep installation at $INSTALL_DIR"
+    _logInfo "[ripgrep]  Found existing ripgrep installation at $INSTALL_DIR"
     return
   fi
 
@@ -44,5 +44,5 @@ install_ripgrep()  {
 # ripgrep
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ ripgrep installed successfully to $INSTALL_DIR"
+  _logInfo "[ripgrep]  ✅ ripgrep installed successfully to $INSTALL_DIR"
 }

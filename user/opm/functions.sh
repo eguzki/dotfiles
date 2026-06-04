@@ -13,7 +13,7 @@ install_opm()  {
   DOWNLOAD_URL="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-${OCP_VERSION}/opm-linux-rhel9-${VERSION}.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing opm installation at $INSTALL_DIR"
+    _logInfo "[opm]  Found existing opm installation at $INSTALL_DIR"
     return
   fi
 
@@ -45,7 +45,7 @@ install_opm()  {
 # opm
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ opm installed successfully to $INSTALL_DIR"
+  _logInfo "[opm]  ✅ opm installed successfully to $INSTALL_DIR"
 }
 
 install_opm_policy()  {
@@ -63,5 +63,5 @@ install_opm_policy()  {
   mkdir -p $(dirname $DEST_FILE)
   cp -r $LOCAL_FILE $DEST_FILE
 
-  _logInfo "  ✅ opm policy file installed successfully to $DEST_FILE"
+  _logInfo "[opm]  ✅ opm policy file installed successfully to $DEST_FILE"
 }

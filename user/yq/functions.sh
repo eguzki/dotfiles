@@ -12,7 +12,7 @@ install_yq()  {
   DOWNLOAD_URL="https://github.com/mikefarah/yq/releases/download/v${VERSION}/yq_linux_amd64.tar.gz"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing yq installation at $INSTALL_DIR"
+    _logInfo "[yq]  Found existing yq installation at $INSTALL_DIR"
     return
   fi
 
@@ -42,5 +42,5 @@ install_yq()  {
 # YQ
 export PATH=$INSTALL_DIR:\$PATH
 EOF
-  _logInfo "  ✅ yq installed successfully to $INSTALL_DIR"
+  _logInfo "[yq]  ✅ yq installed successfully to $INSTALL_DIR"
 }

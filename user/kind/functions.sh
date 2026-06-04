@@ -11,7 +11,7 @@ install_kind()  {
   DOWNLOAD_URL="https://kind.sigs.k8s.io/dl/v${VERSION}/kind-linux-amd64"
 
   if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "  Found existing kind installation at $INSTALL_DIR"
+    _logInfo "[kind]  Found existing kind installation at $INSTALL_DIR"
     return
   fi
 
@@ -35,5 +35,5 @@ install_kind()  {
 export PATH=$INSTALL_DIR:\$PATH
 source <(kind completion bash)
 EOF
-  _logInfo "  ✅ kind installed successfully to $INSTALL_DIR"
+  _logInfo "[kind]  ✅ kind installed successfully to $INSTALL_DIR"
 }

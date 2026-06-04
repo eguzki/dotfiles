@@ -1,6 +1,6 @@
 install_nerd_font ()  {
   if fc-list | grep --quiet "FiraCode"; then
-    _logInfo "  FiraCode Nerd Font already installed!"
+    _logInfo "[nerd_fonts]  FiraCode Nerd Font already installed!"
     return
   fi
 
@@ -31,5 +31,5 @@ install_nerd_font ()  {
   # Clean up
   rm -rf "$TEMP_DIR"
 
-  _logInfo "  FiraCode Nerd Font installed!"
+  _logInfo "[nerd_fonts]  FiraCode Nerd Font installed!"
 }

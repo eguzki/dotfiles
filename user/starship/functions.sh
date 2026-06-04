@@ -11,7 +11,7 @@ install_starship() {
 	LOCAL_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 	if [ -d "$INSTALL_DIR" ]; then
-		_logInfo "  Found existing starship installation at $INSTALL_DIR"
+		_logInfo "[starship]  Found existing starship installation at $INSTALL_DIR"
 		return
 	fi
 
@@ -49,5 +49,5 @@ install_starship_config() {
 	#
 	cp -r $LOCAL_FILE $DEST_FILE
 
-	_logInfo "  ✅ starship configuration installed successfully to $DEST_FILE"
+	_logInfo "[starship]  ✅ starship configuration installed successfully to $DEST_FILE"
 }

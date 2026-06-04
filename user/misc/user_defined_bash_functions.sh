@@ -2,7 +2,7 @@ install_user_defined_bash_functions ()  {
   mkdir -p ~/.bashrc.d
 
   if grep --quiet "# User specific aliases and functions" ~/.bashrc ; then
-    _logInfo "  ~/.bashrc already reads from ~/.bashrc.d/*"
+    _logInfo "[bashrc]  ~/.bashrc already reads from ~/.bashrc.d/*"
     return
   fi
 
@@ -20,5 +20,5 @@ fi
 unset rc
 EOF
 
-  _logInfo "  ~/.bashrc reads from ~/.bashrc.d/*"
+  _logInfo "[bashrc]  ~/.bashrc reads from ~/.bashrc.d/*"
 }
