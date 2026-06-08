@@ -124,6 +124,24 @@ return {
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
+
+			-- Shortcut for searching obsidian notes
+			vim.keymap.set("n", "<leader>son", function()
+				builtin.find_files({
+					cwd = "~/obsidian/main",
+					prompt_title = "Search Obsidian notes",
+					file_ignore_patterns = { "^%.obsidian/" },
+				})
+			end, { desc = "[S]earch [O]bsidian [N]otes" })
+
+			-- Shortcut for searching the contents of the obsidian notes
+			vim.keymap.set("n", "<leader>sog", function()
+				builtin.live_grep({
+					cwd = "~/obsidian/main",
+					prompt_title = "Live Grep in Obsidian Notes",
+					file_ignore_patterns = { "^%.obsidian/" },
+				})
+			end, { desc = "[S]earch [O]bsidian by [G]rep" })
 		end,
 	},
 }
