@@ -1,46 +1,46 @@
-install_nvim_binary ()  {
+install_nvim_binary() {
 
-  local VERSION
-  local INSTALL_DIR
-  local DOWNLOAD_URL
-  local TMP_DIR
-  local TMP_FILE
+	local VERSION
+	local INSTALL_DIR
+	local DOWNLOAD_URL
+	local TMP_DIR
+	local TMP_FILE
 
-  # --- Configuration ---
-  VERSION=v0.11.4
-  INSTALL_DIR="$HOME/apps/nvim-${VERSION}"
-  DOWNLOAD_URL="https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz"
+	# --- Configuration ---
+	VERSION=v0.11.4
+	INSTALL_DIR="$HOME/apps/nvim-${VERSION}"
+	DOWNLOAD_URL="https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz"
 
-  if [ -d "$INSTALL_DIR" ]; then
-    _logInfo "[nvim]  Found existing nvim installation at $INSTALL_DIR"
-    return
-  fi
+	if [ -d "$INSTALL_DIR" ]; then
+		_logInfo "[nvim]  Found existing nvim installation at $INSTALL_DIR"
+		return
+	fi
 
-  # This script downloads and installs the release of Neovim
-  # for Linux x86-64 into the user's home directory (~/apps/nvim-x.y.z).
+	# This script downloads and installs the release of Neovim
+	# for Linux x86-64 into the user's home directory (~/apps/nvim-x.y.z).
 
-  # Exit immediately if a command exits with a non-zero status.
-  set -e
+	# Exit immediately if a command exits with a non-zero status.
+	set -e
 
-  # --- Main Logic ---
+	# --- Main Logic ---
 
-  # Create a temporary directory
-  TMP_DIR=$(mktemp -d)
-  TMP_FILE="${TMP_DIR}/nvim-linux64.tar.gz"
+	# Create a temporary directory
+	TMP_DIR=$(mktemp -d)
+	TMP_FILE="${TMP_DIR}/nvim-linux64.tar.gz"
 
-  # 1. Download the Neovim release
-  curl -L "$DOWNLOAD_URL" -o "$TMP_FILE"
+	# 1. Download the Neovim release
+	curl -L "$DOWNLOAD_URL" -o "$TMP_FILE"
 
-  # 2. Extract the downloaded archive into the home directory
-  mkdir -p "$INSTALL_DIR"
-  tar xzvf "$TMP_FILE" -C "$INSTALL_DIR" --strip-components 1
+	# 2. Extract the downloaded archive into the home directory
+	mkdir -p "$INSTALL_DIR"
+	tar xzvf "$TMP_FILE" -C "$INSTALL_DIR" --strip-components 1
 
-  # 3. Clean up the temporary file
-  rm "$TMP_FILE"
+	# 3. Clean up the temporary file
+	rm "$TMP_FILE"
 
-  # 4. Add Neovim to the system's PATH
-  #
-  cat <<EOF > ~/.bashrc.d/nvim
+	# 4. Add Neovim to the system's PATH
+	#
+	cat <<EOF >~/.bashrc.d/nvim
 export PATH=$INSTALL_DIR/bin:\$PATH
 
 # Ensure nvim is set as EDITOR if it isn't already set
@@ -49,21 +49,20 @@ if [ -z "\$EDITOR" ]; then
     export EDITOR="$INSTALL_DIR/bin/nvim"
 fi
 EOF
-  _logInfo "[nvim]  ✅ Neovim installed successfully to $INSTALL_DIR"
+	_logInfo "[nvim]  ✅ Neovim installed successfully to $INSTALL_DIR"
 }
 
-DOTFILES_NVIM_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+DOTFILES_NVIM_PATH=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-install_nvim_config () {
-  mkdir -p $HOME_CONFIG
+install_nvim_config() {
+	mkdir -p $HOME_CONFIG
 
-  declare -a nvim_configs=("nvim-go" "nvim-rust" "nvim-ts")
-  rm -rf $HOME_CONFIG/nvim 2>/dev/null
-  cp -ar $DOTFILES_NVIM_PATH/nvim $HOME_CONFIG
-  _logInfo "[nvim]  ✅ Neovim ${nvim_config} config installed successfully to $HOME_CONFIG"
+	rm -rf $HOME_CONFIG/nvim 2>/dev/null
+	cp -ar $DOTFILES_NVIM_PATH/nvim $HOME_CONFIG
+	_logInfo "[nvim]  ✅ Neovim ${nvim_config} config installed successfully to $HOME_CONFIG"
 }
 
-install_nvim ()  {
-    install_nvim_binary
-    install_nvim_config
+install_nvim() {
+	install_nvim_binary
+	install_nvim_config
 }
