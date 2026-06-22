@@ -27,7 +27,6 @@ source $CURRENT_PATH/user/opm/functions.sh
 source $CURRENT_PATH/user/k9s/functions.sh
 source $CURRENT_PATH/user/claude/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
-source $CURRENT_PATH/user/acli/functions.sh
 source $CURRENT_PATH/user/obsidian/functions.sh
 
 echo ''
@@ -55,7 +54,6 @@ install_opm_policy
 install_k9s
 install_claude_plugins
 install_tree-sitter-cli
-install_acli
 install_obsidian
 
 echo ''
