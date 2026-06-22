@@ -55,6 +55,7 @@ install_k9s
 install_claude_plugins
 install_tree-sitter-cli
 install_obsidian
+install_jira_config
 
 echo ''
 _logInfo "  All installed!"
