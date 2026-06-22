@@ -28,6 +28,7 @@ source $CURRENT_PATH/user/k9s/functions.sh
 source $CURRENT_PATH/user/claude/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
 source $CURRENT_PATH/user/obsidian/functions.sh
+source $CURRENT_PATH/user/jiraconfig/functions.sh
 
 echo ''
 
