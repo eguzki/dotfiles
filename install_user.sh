@@ -29,6 +29,7 @@ source $CURRENT_PATH/user/claude/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
 source $CURRENT_PATH/user/obsidian/functions.sh
 source $CURRENT_PATH/user/jiraconfig/functions.sh
+source $CURRENT_PATH/user/googleworkspaceconfig/functions.sh
 source $CURRENT_PATH/user/protoc/functions.sh
 
 echo ''
@@ -58,6 +59,7 @@ install_claude_plugins
 install_tree-sitter-cli
 install_obsidian
 install_jira_config
+install_google_workspace_config
 install_protoc
 
 echo ''
