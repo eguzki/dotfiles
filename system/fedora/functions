@@ -11,3 +11,20 @@ install_packages ()  {
       tig \
       curl
 }
+
+install_netbird ()  {
+  if [ ! -f /etc/yum.repos.d/netbird.repo ]; then
+    _logInfo "  Adding NetBird dnf repository"
+    cat <<EOF > /etc/yum.repos.d/netbird.repo
+[netbird]
+name=netbird
+baseurl=https://pkgs.netbird.io/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
+repo_gpgcheck=1
+EOF
+  fi
+
+  dnf install -y netbird netbird-ui gtk4 webkitgtk6.0 xdg-utils
+}
