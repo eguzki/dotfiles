@@ -24,6 +24,7 @@ source $CURRENT_PATH/user/kubectl/functions.sh
 source $CURRENT_PATH/user/kubectx/functions.sh
 source $CURRENT_PATH/user/kind/functions.sh
 source $CURRENT_PATH/user/opm/functions.sh
+source $CURRENT_PATH/user/crane/functions.sh
 source $CURRENT_PATH/user/k9s/functions.sh
 source $CURRENT_PATH/user/claude/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
@@ -54,6 +55,7 @@ install_kubectx
 install_kind
 install_opm
 install_opm_policy
+install_crane
 install_k9s
 install_claude_plugins
 install_tree-sitter-cli
