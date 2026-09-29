@@ -1,13 +1,15 @@
 install_starship() {
 	# https://starship.rs/
 
+	local VERSION
 	local INSTALL_DIR
 	local LOCAL_FILE
 	local LOCAL_DIR
 	local DEST_FILE
 
 	# --- Configuration ---
-	INSTALL_DIR="$HOME/apps/starship"
+	VERSION="1.26.0"
+	INSTALL_DIR="$HOME/apps/starship-${VERSION}"
 	LOCAL_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 	if [ -d "$INSTALL_DIR" ]; then
@@ -18,13 +20,12 @@ install_starship() {
 	mkdir -p "$INSTALL_DIR"
 
 	# This script downloads and installs the release of starship
-	# for Linux x86-64 into the user's home directory (~/apps/starship).
+	# for Linux x86-64 into the user's home directory (~/apps/starship-x.y.z).
 
 	# --- Main Logic ---
 
-	# 1. Install latest version
-	# if starship is already installed it will be updated to the latest version
-	curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir ${INSTALL_DIR}
+	# 1. Install pinned version
+	curl -sS https://starship.rs/install.sh | sh -s -- --yes --version "v${VERSION}" --bin-dir ${INSTALL_DIR}
 
 	# 2. Add starship to the system's PATH
 	#
