@@ -58,6 +58,7 @@ install_opm_policy
 install_crane
 install_k9s
 install_claude_plugins
+install_claude_settings
 install_tree-sitter-cli
 install_obsidian
 install_jira_config
