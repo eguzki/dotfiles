@@ -19,6 +19,7 @@ source $CURRENT_PATH/user/jq/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
 source $CURRENT_PATH/user/obsidian/functions.sh
+source $CURRENT_PATH/user/inputrc/functions.sh
 
 echo ''
 
@@ -36,6 +37,7 @@ install_starship
 install_starship_config
 install_tree-sitter-cli
 install_obsidian
+install_inputrc_config
 
 echo ''
 _logInfo "  All installed!"
