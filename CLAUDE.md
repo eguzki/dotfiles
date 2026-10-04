@@ -67,10 +67,6 @@ The nvim config lives at `user/nvim/nvim/` and is copied verbatim to `~/.config/
 
 **Telescope keymaps** (prefix `<leader>s`): `sf` files, `sg` live grep, `sw` word under cursor, `son` Obsidian notes, `sog` grep in Obsidian.
 
-### Claude Code plugins
-
-`user/claude/local-marketplace/` is a local Claude Code plugin marketplace. `install_claude_plugins()` copies it to `~/.claude/plugins/local`. Currently contains the `personal-skills` plugin with `clipboard` and `english` skills.
-
 ## Adding a new user-level tool
 
 1. Create `user/<toolname>/functions.sh` following the existing pattern (versioned install dir, idempotent check, `~/.bashrc.d/<toolname>` snippet).

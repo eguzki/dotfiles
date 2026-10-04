@@ -16,22 +16,9 @@ source $CURRENT_PATH/user/misc/local_bin.sh
 source $CURRENT_PATH/user/gitconfig/functions.sh
 source $CURRENT_PATH/user/yq/functions.sh
 source $CURRENT_PATH/user/jq/functions.sh
-source $CURRENT_PATH/user/gcloud/functions.sh
-source $CURRENT_PATH/user/go/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
-source $CURRENT_PATH/user/gh/functions.sh
-source $CURRENT_PATH/user/kubectl/functions.sh
-source $CURRENT_PATH/user/kubectx/functions.sh
-source $CURRENT_PATH/user/kind/functions.sh
-source $CURRENT_PATH/user/opm/functions.sh
-source $CURRENT_PATH/user/crane/functions.sh
-source $CURRENT_PATH/user/k9s/functions.sh
-source $CURRENT_PATH/user/claude/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
 source $CURRENT_PATH/user/obsidian/functions.sh
-source $CURRENT_PATH/user/jiraconfig/functions.sh
-source $CURRENT_PATH/user/googleworkspaceconfig/functions.sh
-source $CURRENT_PATH/user/protoc/functions.sh
 
 echo ''
 
@@ -45,25 +32,10 @@ install_nerd_font
 install_fzf
 install_ripgrep
 install_nvim
-install_gcloud
-install_go
 install_starship
 install_starship_config
-install_gh
-install_kubectl
-install_kubectx
-install_kind
-install_opm
-install_opm_policy
-install_crane
-install_k9s
-install_claude_plugins
-install_claude_settings
 install_tree-sitter-cli
 install_obsidian
-install_jira_config
-install_google_workspace_config
-install_protoc
 
 echo ''
 _logInfo "  All installed!"

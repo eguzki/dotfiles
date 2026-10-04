@@ -34,6 +34,5 @@ esac
 _logInfo "  Running on $DISTRO"
 
 install_packages
-install_netbird
 
 _logInfo "  All installed!"
