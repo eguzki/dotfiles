@@ -4,9 +4,8 @@
     editor = 'nvim'
 
 [user]
-    email = eastizle@redhat.com
+    email = eguzki.astiz@gmail.com
     name = Eguzki Astiz Lezaun
-    signingkey = 5B0B5A88C4C5403B
 
 # ------------------ M E R G E -------------------------
 # https://git-scm.com/docs/git-mergetool
