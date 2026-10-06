@@ -9,5 +9,6 @@ install_packages ()  {
       clang \
       xclip \
       tig \
-      curl
+      curl \
+      uv
 }

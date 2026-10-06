@@ -16,9 +16,9 @@ source $CURRENT_PATH/user/misc/local_bin.sh
 source $CURRENT_PATH/user/gitconfig/functions.sh
 source $CURRENT_PATH/user/yq/functions.sh
 source $CURRENT_PATH/user/jq/functions.sh
+source $CURRENT_PATH/user/node/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
-source $CURRENT_PATH/user/obsidian/functions.sh
 source $CURRENT_PATH/user/inputrc/functions.sh
 
 echo ''
@@ -29,6 +29,7 @@ install_gitconfig
 install_fd
 install_yq
 install_jq
+install_node
 install_nerd_font
 install_fzf
 install_ripgrep
@@ -36,7 +37,6 @@ install_nvim
 install_starship
 install_starship_config
 install_tree-sitter-cli
-install_obsidian
 install_inputrc_config
 
 echo ''
