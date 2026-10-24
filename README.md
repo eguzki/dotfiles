@@ -13,13 +13,6 @@ bash install_user.sh
 
 ## Development
 
-### Ubuntu
-
-```
-docker build -f Dockerfile.ubuntu -t myubuntu .
-docker run --rm -ti -v $PWD:/home/apprunner/dotfiles myubuntu /bin/bash
-```
-
 ### Fedora
 
 ```
