@@ -6,6 +6,12 @@ CURRENT_PATH="$(cd "$(dirname "$0")" && pwd)"
 HOME_CONFIG=$HOME/.config
 
 source $CURRENT_PATH/helper/logging.sh
+
+if [ "$(id -u)" -eq 0 ]; then
+	_logError "  install_user.sh must not be run as root. Run it as your normal user."
+	exit 1
+fi
+
 source $CURRENT_PATH/user/nerd_fonts/functions.sh
 source $CURRENT_PATH/user/nvim/functions.sh
 source $CURRENT_PATH/user/fd/functions.sh
