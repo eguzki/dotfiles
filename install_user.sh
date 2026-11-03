@@ -27,6 +27,7 @@ source $CURRENT_PATH/user/node/functions.sh
 source $CURRENT_PATH/user/starship/functions.sh
 source $CURRENT_PATH/user/tree-sitter-cli/functions.sh
 source $CURRENT_PATH/user/inputrc/functions.sh
+source $CURRENT_PATH/user/yubikey/functions.sh
 
 echo ''
 
@@ -46,6 +47,7 @@ install_starship
 install_starship_config
 install_tree-sitter-cli
 install_inputrc_config
+install_opensc_firefox_config
 
 echo ''
 _logInfo "  All installed!"

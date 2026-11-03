@@ -1,0 +1,14 @@
+# User override of /usr/share/p11-kit/modules/opensc.module
+#
+# Keep OpenSC available system-wide, but do NOT expose it to Firefox through the
+# p11-kit proxy. On Fedora, Firefox reaches smartcards via that proxy, and the
+# proxy mishandles the YubiKey PIV touch-wait -> PIN/touch loop (correct PIN ->
+# flash for touch -> re-asks PIN -> flashes again) for client-auth certs in
+# slot 9A (e.g. the FNMT cert).
+#
+# Firefox must load /usr/lib64/opensc-pkcs11.so DIRECTLY instead:
+#   Settings > Privacy & Security > Security Devices > Load
+#   name: OpenSC PKCS#11   file: /usr/lib64/opensc-pkcs11.so
+# That path handles the touch correctly (one PIN + one touch).
+module: opensc-pkcs11.so
+disable-in: firefox,firefox-bin,plugin-container
