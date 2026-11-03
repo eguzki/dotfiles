@@ -10,5 +10,17 @@ install_packages ()  {
       xclip \
       tig \
       curl \
-      uv
+      uv \
+      opensc \
+      yubikey-manager
+  # opensc provides /usr/lib64/opensc-pkcs11.so (+ pulls in the pcsc-lite stack);
+  # yubikey-manager provides the `ykman` CLI for managing PIV slots. Needed for
+  # the YubiKey PIV certificate in Firefox (see user/yubikey/opensc.module).
+  # No gnupg2-scdaemon: GPG commit signing is not used here.
+
+  # pcscd is socket-activated; enable it (skip when systemd is absent, e.g. the
+  # Dockerfile.fedora test container).
+  if command -v systemctl >/dev/null 2>&1 && [ -d /run/systemd/system ]; then
+    systemctl enable pcscd.socket
+  fi
 }
